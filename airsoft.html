@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AIRSOFT - əsl döyüşçülər üçün ekstremal peyntbol. 50+ oyun meydançası, 5000+ aktiv oyunçu, peşəkar avadanlıq.">
+    <meta name="keywords" content="airsoft, peyntbol, taktiki oyunlar, ekstremal idman">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="AIRSOFT - Ekstremal Peyntbol">
+    <meta property="og:description" content="5000+ aktiv oyunçuya qoşulun! Peşəkar avadanlıq, 50 oyun meydançası, hər həftə turnir.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="az_AZ">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="ru_RU">
+    
+    <title>AIRSOFT - Ekstremal Peyntbol</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="logo" aria-label="AIRSOFT logo">AIRSOFT</div>
+            <div class="header-right">
+                <nav aria-label="Main navigation">
+                    <ul>
+                        <li><a href="#about" data-az="Haqqımızda" data-en="About" data-ru="О нас">Haqqımızda</a></li>
+                        <li><a href="#equipment" data-az="Avadanlıq" data-en="Equipment" data-ru="Снаряжение">Avadanlıq</a></li>
+                        <li><a href="#games" data-az="Paketlər" data-en="Packages" data-ru="Пакеты">Paketlər</a></li>
+                        <li><a href="#gallery" data-az="Qalereya" data-en="Gallery" data-ru="Галерея">Qalereya</a></li>
+                    </ul>
+                </nav>
+                <div class="language-switcher" role="group" aria-label="Language selection">
+                    <button class="lang-btn active" onclick="changeLanguage('az', this)" aria-label="Azərbaycan dili">AZE</button>
+                    <button class="lang-btn" onclick="changeLanguage('en', this)" aria-label="English language">ENG</button>
+                    <button class="lang-btn" onclick="changeLanguage('ru', this)" aria-label="Русский язык">RUS</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>AIRSOFT</h1>
+            <p data-az="Əsl döyüşçülər üçün ekstremal peyntbol!" data-en="Extreme paintball for real fighters!" data-ru="Экстремальный пейнтбол для настоящих бойцов!">Əsl döyüşçülər üçün ekstremal peyntbol!</p>
+            <div class="hero-buttons">
+                <button class="cta-button" onclick="openModal()" data-az="Oyuna qoşul" data-en="Join the game" data-ru="Присоединиться к игре">Oyuna qoşul</button>
+                <a href="#equipment" class="cta-button cta-secondary" data-az="Avadanlığa bax" data-en="View equipment" data-ru="Смотреть снаряжение">Avadanlığa bax</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <div class="container">
+            <h2 data-az="Haqqımızda" data-en="About Us" data-ru="О нас">Haqqımızda</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>💪 <span data-az="Adrenalin" data-en="Adrenaline" data-ru="Адреналин">Adrenalin</span></h3>
+                    <p data-az="Oyun zamanı əsl adrenalini hiss edin! Hər atış, hər hərəkət döyüş qəhrəmanı olmaq şansıdır." data-en="Feel real adrenaline during the game! Every shot, every move is a chance to become a battle hero." data-ru="Почувствуйте настоящий адреналин во время игры! Каждый выстрел, каждое движение — это шанс стать героем боя.">Oyun zamanı əsl adrenalini hiss edin! Hər atış, hər hərəkət döyüş qəhrəmanı olmaq şansıdır.</p>
+                </div>
+                <div class="card">
+                    <h3>🎮 <span data-az="Taktika" data-en="Tactics" data-ru="Тактика">Taktika</span></h3>
+                    <p data-az="Qalib gəlmək üçün strategiya və taktikadan istifadə edin. AIRSOFT sadəcə oyun deyil, ən yüksək səviyyədə hərbi simulyasiyadır." data-en="Use strategy and tactics to win. AIRSOFT is not just a game, it's military simulation at the highest level." data-ru="Используйте стратегию и тактику для победы. AIRSOFT — это не просто игра, это военная симуляция высшего уровня.">Qalib gəlmək üçün strategiya və taktikadan istifadə edin. AIRSOFT sadəcə oyun deyil, ən yüksək səviyyədə hərbi simulyasiyadır.</p>
+                </div>
+                <div class="card">
+                    <h3>👥 <span data-az="Komanda" data-en="Team" data-ru="Команда">Komanda</span></h3>
+                    <p data-az="Öz komandanızı tapın! Dostlarınızla oynayın və ya təcrübəli oyunçular klubumuza qoşulun." data-en="Find your team! Play with friends or join our club of experienced players." data-ru="Найдите свою команду! Играйте с друзьями или присоединяйтесь к нашему клубу опытных игроков.">Öz komandanızı tapın! Dostlarınızla oynayın və ya təcrübəli oyunçular klubumuza qoşulun.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EQUIPMENT SECTION -->
+    <section id="equipment">
+        <div class="container">
+            <h2 data-az="Bizim Avadanlıq" data-en="Our Equipment" data-ru="Наше снаряжение">Bizim Avadanlıq</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>🔫 <span data-az="Avtomatlar" data-en="Assault Rifles" data-ru="Автоматы">Avtomatlar</span></h3>
+                    <p data-az="Yüksək atəş sürəti və dəqiqliyi olan ən yaxşı avtomat modelləri. Hücum taktikası üçün ideal." data-en="Top assault rifle models with high rate of fire and accuracy. Ideal for offensive tactics." data-ru="Лучшие модели автоматов с высокой скорострельностью и точностью. Идеально для атакующей тактики.">Yüksək atəş sürəti və dəqiqliyi olan ən yaxşı avtomat modelləri. Hücum taktikası üçün ideal.</p>
+                </div>
+                <div class="card">
+                    <h3>🎯 <span data-az="Snayper tüfəngləri" data-en="Sniper Rifles" data-ru="Снайперские винтовки">Snayper tüfəngləri</span></h3>
+                    <p data-az="Uzaq məsafə taktikləri üçün güclü snayper sistemləri. Məsafədən dəqiqlik sizin silahınızdır!" data-en="Powerful sniper systems for long-range tacticians. Accuracy at distance is your weapon!" data-ru="Мощные снайперские системы для тактиков дальнего боя. Точность на расстоянии — ваше оружие!">Uzaq məsafə taktikləri üçün güclü snayper sistemləri. Məsafədən dəqiqlik sizin silahınızdır!</p>
+                </div>
+                <div class="card">
+                    <h3>🛡️ <span data-az="Müdafiə" data-en="Protection" data-ru="Защита">Müdafiə</span></h3>
+                    <p data-az="Tam qoruyucu avadanlıq dəsti: maksimum təhlükəsizlik üçün maskalar, jiletlər və dəbilqələr." data-en="Complete set of protective equipment: masks, vests and helmets for maximum safety." data-ru="Полный комплект защитного снаряжения: маски, жилеты и шлемы для максимальной безопасности.">Tam qoruyucu avadanlıq dəsti: maksimum təhlükəsizlik üçün maskalar, jiletlər və dəbilqələr.</p>
+                </div>
+                <div class="card">
+                    <h3>💣 <span data-az="Qranatlar" data-en="Grenades" data-ru="Гранаты">Qranatlar</span></h3>
+                    <p data-az="Qrup taktikası üçün zərbə qranatları. Strateji əməliyyatlar üçün sərsəmləşdirici və tüstü qranatları." data-en="Impact grenades for group tactics. Stun and smoke grenades for strategic operations." data-ru="Ударные гранаты для групповой тактики. Оглушающие и дымовые гранаты для стратегических операций.">Qrup taktikası üçün zərbə qranatları. Strateji əməliyyatlar üçün sərsəmləşdirici və tüstü qranatları.</p>
+                </div>
+                <div class="card">
+                    <h3>🎒 <span data-az="Bel çantaları" data-en="Backpacks" data-ru="Рюкзаки">Bel çantaları</span></h3>
+                    <p data-az="Sursat və avadanlıq daşımaq üçün xüsusi taktiki bel çantaları." data-en="Specialized tactical backpacks for carrying ammunition and equipment." data-ru="Специализированные тактические рюкзаки для переноски боеприпасов и снаряжения.">Sursat və avadanlıq daşımaq üçün xüsusi taktiki bel çantaları.</p>
+                </div>
+                <div class="card">
+                    <h3>🥾 <span data-az="Çəkmələr" data-en="Boots" data-ru="Обувь">Çəkmələr</span></h3>
+                    <p data-az="Hərbi taktiki çəkmələr istənilən ərazidə rahatlıq və etibarlılıq təmin edir." data-en="Military tactical boots provide comfort and reliability on any terrain." data-ru="Военная тактическая обувь обеспечивает комфорт и надёжность на любой местности.">Hərbi taktiki çəkmələr istənilən ərazidə rahatlıq və etibarlılıq təmin edir.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PACKAGES SECTION -->
+    <section id="games">
+        <div class="container">
+            <h2 data-az="Paketlər" data-en="Packages" data-ru="Пакеты">Paketlər</h2>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3 data-az="STANDART PAKET" data-en="STANDARD PACKAGE" data-ru="СТАНДАРТ ПАКЕТ">STANDART PAKET</h3>
+                        <div class="package-price">25 <span>AZN</span></div>
+                    </div>
+                    <ul class="package-features">
+                        <li>🔫 <span data-az="400 ədəd güllə (şarik)" data-en="400 bullets (balls)" data-ru="400 пуль (шариков)">400 ədəd güllə (şarik)</span></li>
+                        <li>👓 <span data-az="Qoruyucu vasitələr" data-en="Protective equipment" data-ru="Защитное снаряжение">Qoruyucu vasitələr</span></li>
+                        <li>👥 <span data-az="Oyunçuların sayı 6-20" data-en="6-20 players" data-ru="6-20 игроков">Oyunçuların sayı 6-20</span></li>
+                        <li>⏱ <span data-az="Oyunun müddəti 3 saat" data-en="Game duration 3 hours" data-ru="Длительность игры 3 часа">Oyunun müddəti 3 saat</span></li>
+                    </ul>
+                    <button class="package-btn" onclick="openModal()" data-az="Qeydiyyat" data-en="Register" data-ru="Регистрация">Qeydiyyat</button>
+                </div>
+                <div class="package-card featured">
+                    <div class="package-badge" data-az="Populyar" data-en="Popular" data-ru="Популярный">Populyar</div>
+                    <div class="package-header">
+                        <h3 data-az="STANDART PLUS PAKET" data-en="STANDARD PLUS PACKAGE" data-ru="СТАНДАРТ ПЛЮС ПАКЕТ">STANDART PLUS PAKET</h3>
+                        <div class="package-price">35 <span>AZN</span></div>
+                    </div>
+                    <ul class="package-features">
+                        <li>🥋 <span data-az="Geyim daxildir" data-en="Clothing included" data-ru="Одежда включена">Geyim daxildir</span></li>
+                        <li>🔫 <span data-az="400 ədəd güllə (şarik)" data-en="400 bullets (balls)" data-ru="400 пуль (шариков)">400 ədəd güllə (şarik)</span></li>
+                        <li>👓 <span data-az="Qoruyucu vasitələr" data-en="Protective equipment" data-ru="Защитное снаряжение">Qoruyucu vasitələr</span></li>
+                        <li>👥 <span data-az="Oyunçuların sayı 6-20" data-en="6-20 players" data-ru="6-20 игроков">Oyunçuların sayı 6-20</span></li>
+                        <li>⏱ <span data-az="Oyunun müddəti 3 saat" data-en="Game duration 3 hours" data-ru="Длительность игры 3 часа">Oyunun müddəti 3 saat</span></li>
+                    </ul>
+                    <button class="package-btn" onclick="openModal()" data-az="Qeydiyyat" data-en="Register" data-ru="Регистрация">Qeydiyyat</button>
+                </div>
+            </div>
+            <div class="open-games-notice">
+                <p data-az="🎮 Komandanız yoxdursa, fərdi şəkildə BAZAR və ya 4-cü günləri keçirilən AÇIQ OYUNLARDA iştirak edə bilərsiniz!" data-en="🎮 If you don't have a team, you can participate individually in OPEN GAMES held on Sundays or Thursdays!" data-ru="🎮 Если у вас нет команды, вы можете участвовать индивидуально в ОТКРЫТЫХ ИГРАХ по воскресеньям или четвергам!">🎮 Komandanız yoxdursa, fərdi şəkildə BAZAR və ya 4-cü günləri keçirilən AÇIQ OYUNLARDA iştirak edə bilərsiniz!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery">
+        <div class="container">
+            <h2 data-az="Qalereya" data-en="Gallery" data-ru="Галерея">Qalereya</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openGallery(0)">
+                    <img src="images/1.jpg" alt="Airsoft game 1">
+                    <div class="gallery-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item" onclick="openGallery(1)">
+                    <img src="images/2.jpg" alt="Airsoft game 2">
+                    <div class="gallery-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item" onclick="openGallery(2)">
+                    <img src="images/3.jpg" alt="Airsoft game 3">
+                    <div class="gallery-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item" onclick="openGallery(3)">
+                    <img src="images/4.jpg" alt="Airsoft game 4">
+                    <div class="gallery-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item" onclick="openGallery(4)">
+                    <img src="images/5.jpg" alt="Airsoft game 5">
+                    <div class="gallery-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item" onclick="openGallery(5)">
+                    <img src="images/6.jpg" alt="Airsoft game 6">
+                    <div class="gallery-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item" onclick="openGallery(6)">
+                    <img src="images/7.jpg" alt="Airsoft game 7">
+                    <div class="gallery-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item" onclick="openGallery(7)">
+                    <img src="images/8.jpg" alt="Airsoft game 8">
+                    <div class="gallery-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item" onclick="openGallery(8)">
+                    <img src="images/9.jpg" alt="Airsoft game 9">
+                    <div class="gallery-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item" onclick="openGallery(9)">
+                    <img src="images/10.jpg" alt="Airsoft game 10">
+                    <div class="gallery-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item" onclick="openGallery(10)">
+                    <img src="images/11.jpg" alt="Airsoft game 11">
+                    <div class="gallery-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item" onclick="openGallery(11)">
+                    <img src="images/12.jpg" alt="Airsoft game 12">
+                    <div class="gallery-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item" onclick="openGallery(12)">
+                    <img src="images/13.jpg" alt="Airsoft game 13">
+                    <div class="gallery-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item" onclick="openGallery(13)">
+                    <img src="images/14.jpg" alt="Airsoft game 14">
+                    <div class="gallery-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item" onclick="openGallery(14)">
+                    <img src="images/15.jpg" alt="Airsoft game 15">
+                    <div class="gallery-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item" onclick="openGallery(15)">
+                    <img src="images/16.jpg" alt="Airsoft game 16">
+                    <div class="gallery-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item" onclick="openGallery(17)">
+                    <img src="images/18.jpg" alt="Airsoft game 18">
+                    <div class="gallery-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item" onclick="openGallery(18)">
+                    <img src="images/19.jpg" alt="Airsoft game 19">
+                    <div class="gallery-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item" onclick="openGallery(19)">
+                    <img src="images/20.jpg" alt="Airsoft game 20">
+                    <div class="gallery-overlay"><span>+</span></div>
+                </div>
+                <div class="gallery-item" onclick="openGallery(20)">
+                    <img src="images/21.jpg" alt="Airsoft game 21">
+                    <div class="gallery-overlay"><span>+</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY LIGHTBOX -->
+    <div id="galleryLightbox" class="lightbox">
+        <button class="lightbox-close" onclick="closeGallery()">&times;</button>
+        <button class="lightbox-prev" onclick="prevImage()">&#10094;</button>
+        <button class="lightbox-next" onclick="nextImage()">&#10095;</button>
+        <img id="lightboxImage" src="" alt="Gallery image">
+        <div class="lightbox-counter">
+            <span id="currentIndex">1</span> / <span id="totalImages">21</span>
+        </div>
+    </div>
+
+    <!-- STATS SECTION -->
+    <section id="stats">
+        <div class="container">
+            <h2 data-az="Statistika" data-en="Statistics" data-ru="Статистика">Statistika</h2>
+            <div class="achievements">
+                <div class="achievement">
+                    <h4 class="counter" data-target="5000">0</h4>
+                    <p data-az="Aktiv oyunçu" data-en="Active players" data-ru="Активных игроков">Aktiv oyunçu</p>
+                </div>
+                <div class="achievement">
+                    <h4 class="counter" data-target="150">0</h4>
+                    <p data-az="Keçirilmiş turnir" data-en="Tournaments held" data-ru="Турниров проведено">Keçirilmiş turnir</p>
+                </div>
+                <div class="achievement">
+                    <h4 class="counter" data-target="50">0</h4>
+                    <p data-az="Oyun meydançası" data-en="Game fields" data-ru="Игровых площадок">Oyun meydançası</p>
+                </div>
+                <div class="achievement">
+                    <h4>24/7</h4>
+                    <p data-az="Dəstək" data-en="Support" data-ru="Поддержка">Dəstək</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REGISTRATION MODAL -->
+    <div id="registrationModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+            <h2 data-az="Qeydiyyat" data-en="Registration" data-ru="Регистрация">Qeydiyyat</h2>
+            <form id="registrationForm" novalidate>
+                <div class="form-group">
+                    <label for="reg-name" data-az="Ad Soyad" data-en="Full name" data-ru="ФИО">Ad Soyad</label>
+                    <input type="text" id="reg-name" name="name" required aria-required="true">
+                    <span class="error-message" data-az="Zəhmət olmasa ad soyadınızı daxil edin" data-en="Please enter your full name" data-ru="Пожалуйста, введите ФИО"></span>
+                </div>
+                <div class="form-group">
+                    <label for="reg-phone" data-az="Telefon" data-en="Phone" data-ru="Телефон">Telefon</label>
+                    <input type="tel" id="reg-phone" name="phone" required aria-required="true">
+                    <span class="error-message" data-az="Zəhmət olmasa telefon nömrənizi daxil edin" data-en="Please enter your phone number" data-ru="Пожалуйста, введите номер телефона"></span>
+                </div>
+                <div class="form-group">
+                    <label for="reg-email" data-az="Email" data-en="Email" data-ru="Email">Email</label>
+                    <input type="email" id="reg-email" name="email" required aria-required="true">
+                    <span class="error-message" data-az="Düzgün email daxil edin" data-en="Please enter a valid email" data-ru="Введите корректный email"></span>
+                </div>
+                <div class="form-group">
+                    <label for="reg-experience" data-az="Təcrübə səviyyəsi" data-en="Experience level" data-ru="Уровень опыта">Təcrübə səviyyəsi</label>
+                    <select id="reg-experience" name="experience" required aria-required="true">
+                        <option value="" data-az="Seçin..." data-en="Select..." data-ru="Выберите...">Seçin...</option>
+                        <option value="beginner" data-az="Yeni başlayan" data-en="Beginner" data-ru="Новичок">Yeni başlayan</option>
+                        <option value="intermediate" data-az="Orta" data-en="Intermediate" data-ru="Средний">Orta</option>
+                        <option value="advanced" data-az="Təcrübəli" data-en="Advanced" data-ru="Опытный">Təcrübəli</option>
+                        <option value="pro" data-az="Peşəkar" data-en="Professional" data-ru="Профессионал">Peşəkar</option>
+                    </select>
+                    <span class="error-message" data-az="Təcrübə səviyyənizi seçin" data-en="Please select your experience level" data-ru="Выберите уровень опыта"></span>
+                </div>
+                <div class="form-group">
+                    <label for="reg-team" data-az="Komanda adı (istəyə bağlı)" data-en="Team name (optional)" data-ru="Название команды (необязательно)">Komanda adı (istəyə bağlı)</label>
+                    <input type="text" id="reg-team" name="team">
+                </div>
+                <button type="submit" class="submit-btn" data-az="Qeydiyyatdan keç" data-en="Register" data-ru="Зарегистрироваться">Qeydiyyatdan keç</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p data-az="© 2025 AIRSOFT - Ekstremal Peyntbol. Bütün hüquqlar qorunur." data-en="© 2025 AIRSOFT - Extreme Paintball. All rights reserved." data-ru="© 2025 AIRSOFT - Экстремальный Пейнтбол. Все права защищены.">© 2025 AIRSOFT - Ekstremal Peyntbol. Bütün hüquqlar qorunur.</p>
+            <nav class="social-links" aria-label="Social networks">
+                <a href="https://instagram.com/airsoft" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+                <a href="https://facebook.com/airsoft" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
+                <a href="https://youtube.com/airsoft" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube</a>
+                <a href="https://tiktok.com/@airsoft" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TikTok</a>
+            </nav>
+            <p class="footer-motto" data-az="Təhlükəsizlik və dürüstlük — bizim prioritetimiz!" data-en="Safety and honesty - our priority!" data-ru="Безопасность и честность — наш приоритет!">Təhlükəsizlik və dürüstlük — bizim prioritetimiz!</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
