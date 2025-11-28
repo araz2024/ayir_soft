@@ -38,27 +38,13 @@ const messages = {
 // =========================================
 
 const galleryImages = [
-    'images/gallery-1.jpg',
-    'images/gallery-2.jpg',
-    'images/gallery-3.jpg',
-    'images/gallery-4.jpg',
-    'images/gallery-5.jpg',
-    'images/gallery-6.jpg',
-    'images/gallery-7.jpg',
-    'images/gallery-8.jpg',
-    'images/gallery-9.jpg',
-    'images/gallery-10.jpg',
-    'images/gallery-11.jpg',
-    'images/gallery-12.jpg',
-    'images/gallery-13.jpg',
-    'images/gallery-14.jpg',
-    'images/gallery-15.jpg',
-    'images/gallery-16.jpg',
-    'images/gallery-17.jpg',
-    'images/gallery-18.jpg',
-    'images/gallery-19.jpg',
-    'images/gallery-20.jpg',
-    'images/gallery-21.jpg'
+    'images/gallery-1.jpg', 'images/gallery-2.jpg', 'images/gallery-3.jpg',
+    'images/gallery-4.jpg', 'images/gallery-5.jpg', 'images/gallery-6.jpg',
+    'images/gallery-7.jpg', 'images/gallery-8.jpg', 'images/gallery-9.jpg',
+    'images/gallery-10.jpg', 'images/gallery-11.jpg', 'images/gallery-12.jpg',
+    'images/gallery-13.jpg', 'images/gallery-14.jpg', 'images/gallery-15.jpg',
+    'images/gallery-16.jpg', 'images/gallery-17.jpg', 'images/gallery-18.jpg',
+    'images/gallery-19.jpg', 'images/gallery-20.jpg', 'images/gallery-21.jpg'
 ];
 
 let currentImageIndex = 0;
@@ -108,12 +94,9 @@ function openModal() {
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
         
-        // Применяем текущий язык к модальному окну
         modal.querySelectorAll('[data-az]').forEach(element => {
             const text = element.getAttribute('data-' + currentLanguage);
-            if (text) {
-                element.textContent = text;
-            }
+            if (text) element.textContent = text;
         });
     }
 }
@@ -126,44 +109,23 @@ function closeModal() {
     }
 }
 
-/**
- * Меняет язык интерфейса
- * @param {string} lang - Код языка (en, az)
- * @param {HTMLElement} btn - Кнопка, которая была нажата
- */
 function changeLanguage(lang, btn) {
     currentLanguage = lang;
 
-    // Обновляем активную кнопку
-    document.querySelectorAll('.lang-btn').forEach(button => {
-        button.classList.remove('active');
-    });
-    if (btn) {
-        btn.classList.add('active');
-    }
+    document.querySelectorAll('.lang-btn').forEach(button => button.classList.remove('active'));
+    if (btn) btn.classList.add('active');
 
-    // Переводим все элементы с data-атрибутами
     document.querySelectorAll('[data-en]').forEach(element => {
         const text = element.getAttribute(`data-${lang}`);
-        if (text) {
-            if (element.tagName === 'OPTION') {
-                element.textContent = text;
-            } else {
-                element.textContent = text;
-            }
-        }
+        if (text) element.textContent = text;
     });
 
-    // Обновляем lang атрибут html
     document.documentElement.lang = lang;
 
-    // Обновляем заголовок формы
-    const formContainers = document.querySelectorAll('.form-container');
-    formContainers.forEach(container => {
+    document.querySelectorAll('.form-container').forEach(container => {
         container.setAttribute('data-title', messages[lang].dataTransmission);
     });
 
-    // Сохраняем выбор языка
     localStorage.setItem('preferredLanguage', lang);
 }
 
@@ -171,42 +133,27 @@ function changeLanguage(lang, btn) {
 // FORM HANDLING
 // =========================================
 
-/**
- * Валидация email
- */
 function isValidEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
 }
 
-/**
- * Валидация телефона
- */
 function isValidPhone(phone) {
     if (!phone) return true;
     const re = /^[0-9+\-\s()]{7,20}$/;
     return re.test(phone);
 }
 
-/**
- * Показывает ошибку
- */
 function showError(field) {
     field.classList.add('error');
     field.closest('.form-group').classList.add('has-error');
 }
 
-/**
- * Скрывает ошибку
- */
 function hideError(field) {
     field.classList.remove('error');
     field.closest('.form-group').classList.remove('has-error');
 }
 
-/**
- * Валидация контактной формы
- */
 function validateContactForm(form) {
     let isValid = true;
     
@@ -215,40 +162,14 @@ function validateContactForm(form) {
     const phone = form.querySelector('#phone');
     const message = form.querySelector('#message');
 
-    if (!name.value.trim()) {
-        showError(name);
-        isValid = false;
-    } else {
-        hideError(name);
-    }
-
-    if (!email.value.trim() || !isValidEmail(email.value)) {
-        showError(email);
-        isValid = false;
-    } else {
-        hideError(email);
-    }
-
-    if (phone && phone.value && !isValidPhone(phone.value)) {
-        showError(phone);
-        isValid = false;
-    } else if (phone) {
-        hideError(phone);
-    }
-
-    if (!message.value.trim()) {
-        showError(message);
-        isValid = false;
-    } else {
-        hideError(message);
-    }
+    if (!name.value.trim()) { showError(name); isValid = false; } else hideError(name);
+    if (!email.value.trim() || !isValidEmail(email.value)) { showError(email); isValid = false; } else hideError(email);
+    if (phone && phone.value && !isValidPhone(phone.value)) { showError(phone); isValid = false; } else if (phone) hideError(phone);
+    if (!message.value.trim()) { showError(message); isValid = false; } else hideError(message);
 
     return isValid;
 }
 
-/**
- * Валидация формы регистрации
- */
 function validateRegistrationForm(form) {
     let isValid = true;
     
@@ -257,40 +178,14 @@ function validateRegistrationForm(form) {
     const email = form.querySelector('#reg-email');
     const experience = form.querySelector('#reg-experience');
 
-    if (!name.value.trim()) {
-        showError(name);
-        isValid = false;
-    } else {
-        hideError(name);
-    }
-
-    if (!phone.value.trim() || !isValidPhone(phone.value)) {
-        showError(phone);
-        isValid = false;
-    } else {
-        hideError(phone);
-    }
-
-    if (!email.value.trim() || !isValidEmail(email.value)) {
-        showError(email);
-        isValid = false;
-    } else {
-        hideError(email);
-    }
-
-    if (!experience.value) {
-        showError(experience);
-        isValid = false;
-    } else {
-        hideError(experience);
-    }
+    if (!name.value.trim()) { showError(name); isValid = false; } else hideError(name);
+    if (!phone.value.trim() || !isValidPhone(phone.value)) { showError(phone); isValid = false; } else hideError(phone);
+    if (!email.value.trim() || !isValidEmail(email.value)) { showError(email); isValid = false; } else hideError(email);
+    if (!experience.value) { showError(experience); isValid = false; } else hideError(experience);
 
     return isValid;
 }
 
-/**
- * Обработчик контактной формы
- */
 function handleContactForm(e) {
     e.preventDefault();
     
@@ -298,9 +193,7 @@ function handleContactForm(e) {
     const submitBtn = form.querySelector('.submit-btn');
     const originalText = submitBtn.textContent;
 
-    if (!validateContactForm(form)) {
-        return;
-    }
+    if (!validateContactForm(form)) return;
 
     submitBtn.disabled = true;
     submitBtn.textContent = messages[currentLanguage].sending;
@@ -313,9 +206,6 @@ function handleContactForm(e) {
     }, 1000);
 }
 
-/**
- * Обработчик формы регистрации
- */
 function handleRegistrationForm(e) {
     e.preventDefault();
     
@@ -323,9 +213,7 @@ function handleRegistrationForm(e) {
     const submitBtn = form.querySelector('.submit-btn');
     const originalText = submitBtn.textContent;
 
-    if (!validateRegistrationForm(form)) {
-        return;
-    }
+    if (!validateRegistrationForm(form)) return;
 
     submitBtn.disabled = true;
     submitBtn.textContent = messages[currentLanguage].sending;
@@ -384,12 +272,39 @@ function initSmoothScroll() {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+}
+
+// =========================================
+// VIDEO PLAY OVERLAY (Добавлено)
+// =========================================
+
+function initVideoPlayOverlay() {
+    document.querySelectorAll('.video-item').forEach(item => {
+        const video = item.querySelector('video');
+        const overlay = item.querySelector('.play-overlay');
+        if (!video || !overlay) return;
+
+        // При клике на overlay запускаем видео и скрываем overlay с плавной анимацией
+        overlay.addEventListener('click', () => {
+            video.play();
+            overlay.style.transition = 'opacity 0.3s';
+            overlay.style.opacity = '0';
+            setTimeout(() => { overlay.style.display = 'none'; }, 300);
+        });
+
+        // При паузе видео overlay возвращается
+        video.addEventListener('pause', () => {
+            overlay.style.display = 'block';
+            setTimeout(() => { overlay.style.opacity = '1'; }, 10);
+        });
+
+        // При окончании видео overlay возвращается
+        video.addEventListener('ended', () => {
+            overlay.style.display = 'block';
+            setTimeout(() => { overlay.style.opacity = '1'; }, 10);
         });
     });
 }
@@ -403,10 +318,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const savedLang = localStorage.getItem('preferredLanguage') || 'az';
     const langButtons = document.querySelectorAll('.lang-btn');
     const langIndex = { az: 0, en: 1, ru: 2 };
-    
-    if (langButtons[langIndex[savedLang]]) {
-        changeLanguage(savedLang, langButtons[langIndex[savedLang]]);
-    }
+    if (langButtons[langIndex[savedLang]]) changeLanguage(savedLang, langButtons[langIndex[savedLang]]);
 
     // Форма регистрации
     const registrationForm = document.getElementById('registrationForm');
@@ -421,18 +333,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Закрытие модального окна по клику вне окна
     document.addEventListener('click', function(e) {
         const modal = document.getElementById('registrationModal');
-        if (e.target === modal) {
-            closeModal();
-        }
+        if (e.target === modal) closeModal();
     });
 
     // Закрытие модального окна по Escape
     document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            closeModal();
-            closeGallery();
-        }
-        // Стрелки для галереи
+        if (e.key === 'Escape') { closeModal(); closeGallery(); }
         if (document.getElementById('galleryLightbox').classList.contains('active')) {
             if (e.key === 'ArrowRight') nextImage();
             if (e.key === 'ArrowLeft') prevImage();
@@ -441,19 +347,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Закрытие галереи по клику на фон
     const lightbox = document.getElementById('galleryLightbox');
-    if (lightbox) {
-        lightbox.addEventListener('click', function(e) {
-            if (e.target === lightbox) {
-                closeGallery();
-            }
-        });
-    }
+    if (lightbox) lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) closeGallery();
+    });
 
     // Счётчики
     initCounters();
 
     // Плавный скролл
     initSmoothScroll();
+
+    // Видео overlay
+    initVideoPlayOverlay();
 });
 
 // =========================================

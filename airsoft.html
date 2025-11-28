@@ -16,29 +16,39 @@
     
     <title>AIRSOFT - Ekstremal Peyntbol</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.ico">
 </head>
 <body>
     <!-- HEADER -->
     <header>
-        <div class="container">
-            <div class="logo" aria-label="AIRSOFT logo">AIRSOFT</div>
-            <div class="header-right">
-                <nav aria-label="Main navigation">
-                    <ul>
-                        <li><a href="#about" data-az="Haqqımızda" data-en="About" data-ru="О нас">Haqqımızda</a></li>
-                        <li><a href="#equipment" data-az="Avadanlıq" data-en="Equipment" data-ru="Снаряжение">Avadanlıq</a></li>
-                        <li><a href="#games" data-az="Paketlər" data-en="Packages" data-ru="Пакеты">Paketlər</a></li>
-                        <li><a href="#gallery" data-az="Qalereya" data-en="Gallery" data-ru="Галерея">Qalereya</a></li>
-                    </ul>
-                </nav>
-                <div class="language-switcher" role="group" aria-label="Language selection">
-                    <button class="lang-btn active" onclick="changeLanguage('az', this)" aria-label="Azərbaycan dili">AZE</button>
-                    <button class="lang-btn" onclick="changeLanguage('en', this)" aria-label="English language">ENG</button>
-                    <button class="lang-btn" onclick="changeLanguage('ru', this)" aria-label="Русский язык">RUS</button>
-                </div>
+    <div class="container header-inner">
+
+        <!-- ЛОГО + ТЕКСТ -->
+        <div class="logo">
+            <img src="Group 18.png" alt="AIRSOFT logo">
+            <span class="logo-text">AirSoft</span>
+        </div>
+
+        <!-- ПРАВАЯ ЧАСТЬ -->
+        <div class="header-right">
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="#about" data-az="Haqqımızda" data-en="About" data-ru="О нас">Haqqımızda</a></li>
+                    <li><a href="#equipment" data-az="Avadanlıq" data-en="Equipment" data-ru="Снаряжение">Avadanlıq</a></li>
+                    <li><a href="#games" data-az="Paketlər" data-en="Packages" data-ru="Пакеты">Paketlər</a></li>
+                    <li><a href="#gallery" data-az="Qalereya" data-en="Gallery" data-ru="Галерея">Qalereya</a></li>
+                </ul>
+            </nav>
+
+            <div class="language-switcher" role="group" aria-label="Language selection">
+                <button class="lang-btn active" onclick="changeLanguage('az', this)" aria-label="Azərbaycan dili">AZE</button>
+                <button class="lang-btn" onclick="changeLanguage('en', this)" aria-label="English language">ENG</button>
+                <button class="lang-btn" onclick="changeLanguage('ru', this)" aria-label="Русский язык">RUS</button>
             </div>
         </div>
-    </header>
+
+    </div>
+</header>
 
     <!-- HERO SECTION -->
     <section class="hero">
@@ -234,6 +244,56 @@
             </div>
         </div>
     </section>
+
+    <!-- VIDEO SECTION -->
+<section id="videos">
+    <div class="container">
+        <h2 data-az="Videolar" data-en="Videos" data-ru="Видео">Videolar</h2>
+        <div class="videos-grid">
+
+            <div class="video-item">
+                <video controls>
+                    <source src="video/video1.mp4" type="video/mp4">
+                    Ваш браузер не поддержует видео.
+                </video>
+                <div class="play-overlay"><span>▶</span></div>
+            </div>
+
+            <div class="video-item">
+                <video controls>
+                    <source src="video/video2.mp4" type="video/mp4">
+                    Ваш браузер не поддержует видео.
+                </video>
+                <div class="play-overlay"><span>▶</span></div>
+            </div>
+
+            <div class="video-item">
+                <video controls>
+                    <source src="video/video3.mp4" type="video/mp4">
+                    Ваш браузер не поддержует видео.
+                </video>
+                <div class="play-overlay"><span>▶</span></div>
+            </div>
+
+            <div class="video-item">
+                <video controls>
+                    <source src="video/video4.mp4" type="video/mp4">
+                    Ваш браузер не поддержует видео.
+                </video>
+                <div class="play-overlay"><span>▶</span></div>
+            </div>
+
+            <div class="video-item">
+                <video controls>
+                    <source src="video/video5.mp4" type="video/mp4">
+                    Ваш браузер не поддержует видео.
+                </video>
+                <div class="play-overlay"><span>▶</span></div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
     <!-- GALLERY LIGHTBOX -->
     <div id="galleryLightbox" class="lightbox">
