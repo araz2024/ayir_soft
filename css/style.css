@@ -46,7 +46,6 @@ html {
 body {
     font-family: 'Share Tech Mono', monospace;
     color: var(--text-light);
-    background: var(--black);
     line-height: 1.6;
 }
 
@@ -80,7 +79,6 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 header::before {
@@ -115,7 +113,6 @@ header .container {
     font-family: 'Black Ops One', cursive;
     font-size: 36px;
     color: var(--sand);
-    text-shadow: 2px 2px 0 var(--black), 4px 4px 8px rgba(0, 0, 0, 0.5);
     letter-spacing: 4px;
     display: flex;
     align-items: center;
@@ -206,59 +203,32 @@ nav a:focus {
 }
 
 /* =========================================
-   HERO SECTION - Battlefield Style
+   HERO SECTION - С ФОНОВЫМ ИЗОБРАЖЕНИЕМ
    ========================================= */
 .hero {
+    /* ЗАМЕНИТЕ 'images/hero-bg.jpg' НА ПУТЬ К ВАШЕМУ ФОТО */
     background: 
-        linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.9) 100%),
-        repeating-linear-gradient(
-            0deg,
-            transparent,
-            transparent 2px,
-            rgba(74, 93, 35, 0.1) 2px,
-            rgba(74, 93, 35, 0.1) 4px
-        );
+        linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.8) 100%),
+        url('images/back.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: var(--text-light);
     padding: 150px 20px;
     text-align: center;
     position: relative;
     overflow: hidden;
     border-bottom: 4px solid var(--olive);
-}
-
-/* Camo pattern overlay */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-        radial-gradient(ellipse 80px 60px at 20% 30%, var(--olive-dark) 0%, transparent 70%),
-        radial-gradient(ellipse 60px 80px at 70% 60%, var(--gunmetal) 0%, transparent 70%),
-        radial-gradient(ellipse 100px 70px at 40% 80%, var(--olive) 0%, transparent 70%),
-        radial-gradient(ellipse 70px 90px at 80% 20%, var(--black-light) 0%, transparent 70%);
-    opacity: 0.3;
-    animation: camouflage 20s ease-in-out infinite;
-}
-
-@keyframes camouflage {
-    0%, 100% { transform: scale(1) translateX(0); }
-    50% { transform: scale(1.1) translateX(-20px); }
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Corner brackets */
 .hero::after {
-    content: '';
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    right: 30px;
-    bottom: 30px;
-    border: 2px solid var(--olive);
-    opacity: 0.3;
-    pointer-events: none;
+    display: none;
 }
 
 .hero-content {
@@ -270,27 +240,20 @@ nav a:focus {
     font-family: 'Black Ops One', cursive;
     font-size: 80px;
     margin-bottom: 20px;
-    color: var(--sand);
-    text-shadow: 
-        3px 3px 0 var(--black),
-        6px 6px 0 rgba(0, 0, 0, 0.3);
+    color: #ffffff;
     letter-spacing: 12px;
+    text-shadow: none;
     animation: glitch 0.8s ease-out;
 }
 
 @keyframes glitch {
     0% { 
         opacity: 0;
-        transform: translateY(-30px) skewX(-5deg);
-        text-shadow: -3px 0 var(--danger), 3px 0 var(--olive);
-    }
-    50% {
-        text-shadow: 3px 0 var(--danger), -3px 0 var(--olive);
+        transform: translateY(-30px);
     }
     100% { 
         opacity: 1;
-        transform: translateY(0) skewX(0deg);
-        text-shadow: 3px 3px 0 var(--black), 6px 6px 0 rgba(0, 0, 0, 0.3);
+        transform: translateY(0);
     }
 }
 
@@ -298,9 +261,10 @@ nav a:focus {
     font-family: 'Russo One', sans-serif;
     font-size: 22px;
     margin-bottom: 40px;
-    color: var(--text-muted);
+    color: #ffffff;
     letter-spacing: 3px;
     text-transform: uppercase;
+    text-shadow: none;
     animation: fadeIn 0.8s ease-out 0.3s both;
 }
 
@@ -344,7 +308,6 @@ nav a:focus {
 .cta-button:focus {
     background: var(--olive-light);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(74, 93, 35, 0.4);
     outline: none;
 }
 
@@ -369,12 +332,12 @@ nav a:focus {
    ========================================= */
 section {
     padding: 80px 20px;
-    background: var(--black-light);
+    background: rgba(42, 42, 42, 0.7);
     position: relative;
 }
 
 section:nth-child(even) {
-    background: var(--gunmetal);
+    background: rgba(44, 53, 57, 0.7);
 }
 
 section h2 {
@@ -459,7 +422,6 @@ section h2 .underline {
 .card:hover {
     transform: translateY(-5px);
     border-color: var(--olive);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .card h3 {
@@ -510,7 +472,6 @@ section h2 .underline {
 .achievement:hover {
     transform: scale(1.03);
     border-color: var(--olive-light);
-    box-shadow: 0 8px 25px rgba(74, 93, 35, 0.3);
 }
 
 .achievement h4 {
@@ -518,7 +479,6 @@ section h2 .underline {
     font-size: 36px;
     margin-bottom: 10px;
     color: var(--sand);
-    text-shadow: 2px 2px 0 var(--black);
 }
 
 .achievement p {
@@ -660,7 +620,6 @@ section h2 .underline {
 .submit-btn:focus {
     background: var(--olive-light);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(74, 93, 35, 0.4);
     outline: none;
 }
 
@@ -761,13 +720,11 @@ footer p {
 .package-card:hover {
     border-color: var(--olive);
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
 }
 
 .package-card.featured {
     border-color: var(--olive);
     transform: scale(1.05);
-    box-shadow: 0 10px 40px rgba(74, 93, 35, 0.3);
 }
 
 .package-card.featured:hover {
@@ -801,7 +758,6 @@ footer p {
     font-size: 56px;
     color: var(--olive-light);
     margin-bottom: 30px;
-    text-shadow: 2px 2px 0 var(--black);
 }
 
 .package-price span {
@@ -893,12 +849,12 @@ footer p {
     overflow: hidden;
     cursor: pointer;
     aspect-ratio: 4/3;
-    border: 2px solid var(--steel);
+    border: none;
     transition: var(--transition);
 }
 
 .gallery-item:hover {
-    border-color: var(--olive);
+    border: none;
 }
 
 .gallery-item img {
@@ -918,7 +874,7 @@ footer p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(74, 93, 35, 0.7);
+    background: rgba(74, 93, 35, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1148,6 +1104,12 @@ footer p {
    RESPONSIVE
    ========================================= */
 @media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: 120px 20px;
+        background-attachment: scroll;
+    }
+
     .hero h1 {
         font-size: 48px;
         letter-spacing: 6px;
@@ -1275,7 +1237,7 @@ footer p {
 .logo-text {
     font-size: 28px;
     font-weight: 700;
-    color: #4B5320; /* поменяй под свой фон */
+    color: #4B5320;
 }
 
 /* Меню */
@@ -1313,7 +1275,7 @@ nav ul li a {
 /*Video Gallery*/
 .videos-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* ещё больше */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 }
 
@@ -1321,10 +1283,10 @@ nav ul li a {
 .video-item {
     position: relative;
     width: 100%;
-    padding-top: 100%; /* квадрат */
+    padding-top: 100%;
     overflow: hidden;
     border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s;
 }
 
 /* Само видео растягиваем по блоку */
@@ -1338,10 +1300,9 @@ nav ul li a {
     border-radius: 10px;
 }
 
-/* Hover эффект: увеличение и тень */
+/* Hover эффект: увеличение */
 .video-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
 }
 
 /* Иконка Play */
@@ -1350,7 +1311,7 @@ nav ul li a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 60px; /* увеличиваем ещё */
+    font-size: 60px;
     color: rgba(255, 255, 255, 0.8);
     pointer-events: none;
     opacity: 0;
@@ -1360,6 +1321,3 @@ nav ul li a {
 .video-item:hover .play-overlay {
     opacity: 1;
 }
-
-
-
